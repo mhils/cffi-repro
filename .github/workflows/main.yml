@@ -1,0 +1,17 @@
+name: CI
+on: [push]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  repro:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: ./repro.sh
+      - uses: actions/upload-artifact@v3
+        with:
+          name: dist
+          path: dist
