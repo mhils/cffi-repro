@@ -17,5 +17,5 @@ jobs:
       - run: ./repro.sh
       - uses: actions/upload-artifact@v3
         with:
-          name: dist
-          path: dist
+          name: dist-x64
+          path: dist-x64
