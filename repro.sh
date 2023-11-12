@@ -8,4 +8,4 @@ venv/bin/python3 -m pip install pyopenssl
 venv/bin/python3 run.py
 
 venv/bin/python3 -m pip install pyinstaller
-venv/bin/pyinstaller --onefile ./run.py
+venv/bin/pyinstaller --onedir ./run.py
