@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 
+brew update
 brew install python@3.12
-pip install pyopenssl
+python3.12 -m pip install pyopenssl
 
 ./run.py
 
-pip install pyinstaller
+python3.12 -m pip install pyinstaller
 pyinstaller --onefile ./run.py
